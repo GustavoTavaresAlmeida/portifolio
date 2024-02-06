@@ -1,0 +1,95 @@
+.formacao {
+    background: #141414;
+    color: #fff;
+}
+
+.formacao-container {
+    max-width: 1200px;
+    height: 500px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 100px;
+    position: relative;
+}
+
+.formacao-container::after {
+    content: '';
+    display: block;
+    width: 130px;
+    height: 100px;
+    background: url(../img/detalhe.svg) no-repeat center;
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+}
+
+.formacao .subtitulo {
+    color: #000;
+    max-width: 7ch;
+    width: 400px;
+}
+
+.cursos-intensivos h3 {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    color: #292929;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    position: relative;
+    align-items: center;
+}
+
+.cursos-intensivos h3::before {
+    display: block;
+    content: "";
+    width: 32px;
+    height: 32px;
+    background: url("../img/cursos.svg") no-repeat center center;
+    position: absolute;
+    left: -44px;
+    top: 10px;
+}
+
+.cursos-intensivos li {
+    font-size: 1.25rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+
+}
+
+.cursos-intensivos span {
+    color: #8f8f8f;
+}
+
+.cursos-intensivos li {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+    .formacao-container {
+        grid-template-columns: 1fr;
+        height: 500px;
+    }
+    .cursos-intensivos h3 {
+        align-items: center;
+    }
+    .cursos-intensivos h3::before {
+        position: initial;
+        margin-bottom: 10px;
+    }
+    .formacao-container {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 500px){
+    .cursos-intensivos h3 {
+        font-size: 1.75rem;
+    }
+    .cursos-intensivos li {
+        font-size: 1.125rem;
+    }
+}
